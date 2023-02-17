@@ -1,3 +1,7 @@
+mod input;
+
+use input::ask_user;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{}", ask_user());
 }
