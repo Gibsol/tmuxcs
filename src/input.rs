@@ -12,7 +12,7 @@ fn ask_user() -> String {
     buf
 }
 
-pub fn topic_check() {
+fn topic_check() {
     match ask_user().trim().parse::<u8>() {
         Ok(1) => println!("{}", "topic 1".green()),
         Ok(2) => println!("{}", "topic 2".green()),
@@ -21,4 +21,8 @@ pub fn topic_check() {
         Ok(5) => println!("{}", "topic 5".green()),
         _ => println!("{}", "Not a valid number".red()),
     }
+}
+
+pub fn impl_input() {
+    topic_check();
 }

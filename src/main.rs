@@ -1,7 +1,7 @@
 mod input;
 
-use input::topic_check;
+use input::impl_input;
 
 fn main() {
-    topic_check();
+    impl_input();
 }
