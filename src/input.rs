@@ -1,13 +1,24 @@
+use colored::*;
 use std::io;
 
-pub fn ask_user() -> String {
+fn ask_user() -> String {
     let mut buf = String::new();
+    let error_msg = "Invalid input.".red();
 
-    println!("Enter the topic (default: all): ");
+    println!("Enter the topic: ");
 
-    io::stdin()
-        .read_line(&mut buf)
-        .expect("Failed to read line");
+    io::stdin().read_line(&mut buf).expect(&error_msg);
 
     buf
+}
+
+pub fn topic_check() {
+    match ask_user().trim().parse::<u8>() {
+        Ok(1) => println!("{}", "topic 1".green()),
+        Ok(2) => println!("{}", "topic 2".green()),
+        Ok(3) => println!("{}", "topic 3".green()),
+        Ok(4) => println!("{}", "topic 4".green()),
+        Ok(5) => println!("{}", "topic 5".green()),
+        _ => println!("{}", "Not a valid number".red()),
+    }
 }
