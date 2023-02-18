@@ -1,7 +1,7 @@
 mod input;
 
-use input::ask_user;
+use input::topic_check;
 
 fn main() {
-    println!("{}", ask_user());
+    topic_check();
 }
