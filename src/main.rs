@@ -1,4 +1,5 @@
-mod input;
+pub mod input;
+pub mod topics;
 
 use input::impl_input;
 
