@@ -9,5 +9,5 @@ pub fn ask_user() -> String {
         .read_line(&mut buf)
         .expect("Failed to read line");
 
-    input
+    buf
 }
