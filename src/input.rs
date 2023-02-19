@@ -14,7 +14,7 @@ fn ask_user() -> String {
     buf
 }
 
-pub fn topic_check() {
+fn topic_check() {
     match ask_user().trim().parse::<u8>() {
         Ok(1) => println!("{}", topics()[0].green()),
         Ok(2) => println!("{}", topics()[1].green()),
